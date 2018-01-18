@@ -35,6 +35,19 @@ Allows users to detect any hashtag tweets from twitter, post the tweet on slack 
 4. Fill out application details
 5. Save all access tokens and keys to config.js
 
+## config.js Setup
+1. Example:
+    const appsettings = {
+        consumer_key: 'KEY HERE',
+        consumer_secret: 'SECRET HERE',
+        access_token: 'TOKEN HERE',
+        access_token_secret: 'TOKEN SECRET HERE',
+        timeout_ms: 60*1000,
+        webhookURL: 'WEBHOOK URL HERE'
+    }
+    module.exports = appsettings;
+
+
 ## Slack Outgoing Webhook
 1. Go to the Slack Outgoing Webhooks page then click the “outgoing webhook integration”. This step allow you send a message from Slack.
 2. Scroll down to the Integration Settings section. Select “#general” as the channel to listen on. Enter "tweet" within the “Trigger Word(s)” value. Copy your ngrok Forwarding URL(Explain below) plus “/slack” into the URL(s) text box.
