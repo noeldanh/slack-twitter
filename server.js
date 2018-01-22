@@ -6,9 +6,11 @@ const controller = require('./controller')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Routes for Post
 app.post('/tweet', controller.postTweets)
 app.post('/hashtag', controller.getHashtagTweets);
 
+// Port
 const port = process.env.PORT || 3000;
 
 app.listen(3000, () => {
